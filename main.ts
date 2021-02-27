@@ -121,15 +121,77 @@ basic.forever(function () {
     }
 })
 basic.forever(function () {
-    if (true) {
-    	
-    } else if (0 == 0 && 0 == 0) {
-    	
-    } else if (false) {
-    	
-    } else if (false) {
-    	
-    } else {
-    	
+    if (E == 2 && T == 1) {
+        basic.showLeds(`
+            . . . . .
+            . # . # .
+            . . . . .
+            # # # # #
+            . . . . .
+            `)
+    } else if (E == 2 && T == 2) {
+        basic.showLeds(`
+            . . . . .
+            . # . # .
+            . . . . .
+            . # # # .
+            # . . . #
+            `)
+    } else if (E == 2 && T == 3) {
+        basic.showLeds(`
+            . . . . .
+            . # . # .
+            . . . . .
+            # . . . #
+            . # # # .
+            `)
+    } else if (E == 3 && T == 1) {
+        basic.showLeds(`
+            . . . . .
+            . # . # .
+            . . . . .
+            # . . . #
+            . # # # .
+            `)
+    } else if (E == 3 && T == 2) {
+        basic.showLeds(`
+            . . . . .
+            . # . # .
+            . . . . .
+            # # # # #
+            . . . . .
+            `)
+    } else if (E == 3 && T == 3) {
+        basic.showLeds(`
+            . . . . .
+            . # . # .
+            . . . . .
+            . # # # .
+            # . . . #
+            `)
+    } else if (E == 4 && T == 1) {
+        basic.showLeds(`
+            . . . . .
+            . # . # .
+            . . . . .
+            . # # # .
+            # . . . #
+            `)
+    } else if (E == 4 && T == 2) {
+        basic.showLeds(`
+            . . . . .
+            . # . # .
+            . . . . .
+            # . . . #
+            . # # # .
+            `)
+    } else if (E == 4 && T == 3) {
+        basic.showLeds(`
+            . . . . .
+            . # . # .
+            . . . . .
+            # # # # #
+            . . . . .
+            `)
     }
 })
