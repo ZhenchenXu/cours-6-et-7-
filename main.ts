@@ -48,79 +48,6 @@ while (T == 0) {
     }
 }
 basic.forever(function () {
-    while (E > 0) {
-        if (E == 1) {
-            basic.showString("E")
-            E = randint(2, 4)
-        }
-    }
-})
-basic.forever(function () {
-    while (E > 0) {
-        if (E == 2) {
-            basic.showLeds(`
-                . . . . .
-                . # # # .
-                . # # # .
-                . # # # .
-                . . . . .
-                `)
-        }
-        if (E == 3) {
-            basic.showLeds(`
-                # . # . #
-                . # . # .
-                # . # . #
-                . # . # .
-                # . # . #
-                `)
-        }
-        if (E == 4) {
-            basic.showLeds(`
-                . . . . .
-                # . # # #
-                . # . . .
-                # . # # #
-                . . . . .
-                `)
-        }
-    }
-})
-basic.forever(function () {
-    while (T > 0) {
-        if (T == 1) {
-            basic.showLeds(`
-                . . . . .
-                . # # # .
-                . # # # .
-                . # # # .
-                . . . . .
-                `)
-            E = 1
-        }
-        if (T == 2) {
-            basic.showLeds(`
-                # . # . #
-                . # . # .
-                # . # . #
-                . # . # .
-                # . # . #
-                `)
-            E = 1
-        }
-        if (T == 3) {
-            basic.showLeds(`
-                . . . . .
-                # . # # #
-                . # . . .
-                # . # # #
-                . . . . .
-                `)
-            E = 1
-        }
-    }
-})
-basic.forever(function () {
     while (T > 0 && E > 1) {
         if (E == 2 && T == 1) {
             basic.showLeds(`
@@ -212,6 +139,80 @@ basic.forever(function () {
                 `)
             T = 0
             E = 0
+        }
+    }
+})
+basic.forever(function () {
+    while (E > 0) {
+        if (E == 1) {
+            basic.showString("E")
+            E = randint(2, 4)
+        }
+        if (E == 2) {
+            basic.showLeds(`
+                . . . . .
+                . # # # .
+                . # # # .
+                . # # # .
+                . . . . .
+                `)
+        }
+        if (E == 3) {
+            basic.showLeds(`
+                # . # . #
+                . # . # .
+                # . # . #
+                . # . # .
+                # . # . #
+                `)
+        }
+        if (E == 4) {
+            basic.showLeds(`
+                . . . . .
+                # . # # #
+                . # . . .
+                # . # # #
+                . . . . .
+                `)
+        }
+    }
+})
+basic.forever(function () {
+    while (E > 0) {
+    	
+    }
+})
+basic.forever(function () {
+    while (T > 0) {
+        if (T == 1) {
+            basic.showLeds(`
+                . . . . .
+                . # # # .
+                . # # # .
+                . # # # .
+                . . . . .
+                `)
+            E = 1
+        }
+        if (T == 2) {
+            basic.showLeds(`
+                # . # . #
+                . # . # .
+                # . # . #
+                . # . # .
+                # . # . #
+                `)
+            E = 1
+        }
+        if (T == 3) {
+            basic.showLeds(`
+                . . . . .
+                # . # # #
+                . # . . .
+                # . # # #
+                . . . . .
+                `)
+            E = 1
         }
     }
 })
