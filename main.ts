@@ -1,6 +1,5 @@
 let E = 0
 let T = 0
-basic.showString("Bienvenue au roche papier ciseau, t=toi, et e=l'ennemi.  ")
 basic.showLeds(`
     . # . # .
     . . . . .
@@ -8,7 +7,7 @@ basic.showLeds(`
     . # . # .
     . . # . .
     `)
-basic.pause(100)
+basic.pause(1000)
 basic.showLeds(`
     . . . . .
     . # # # .
@@ -16,7 +15,7 @@ basic.showLeds(`
     . # # # .
     . . . . .
     `)
-basic.pause(100)
+basic.pause(1000)
 basic.showLeds(`
     # . # . #
     . # . # .
@@ -24,7 +23,7 @@ basic.showLeds(`
     . # . # .
     # . # . #
     `)
-basic.pause(100)
+basic.pause(1000)
 basic.showLeds(`
     . . . . .
     # . # # #
@@ -32,10 +31,9 @@ basic.showLeds(`
     # . # # #
     . . . . .
     `)
-basic.showString("A=Roche, B=papier, A+B = ciseau ")
 basic.pause(1000)
 basic.showString("Ça commence !")
-while (true) {
+while (T == 0) {
     if (input.buttonIsPressed(Button.A)) {
         basic.showString("T")
         T = 1
@@ -50,7 +48,7 @@ while (true) {
     }
 }
 basic.forever(function () {
-    while (true) {
+    while (T > 0) {
         if (T == 1) {
             basic.showLeds(`
                 . . . . .
@@ -60,7 +58,6 @@ basic.forever(function () {
                 . . . . .
                 `)
             E = 1
-            T = 0
         }
         if (T == 2) {
             basic.showLeds(`
@@ -71,7 +68,6 @@ basic.forever(function () {
                 # . # . #
                 `)
             E = 1
-            T = 0
         }
         if (T == 3) {
             basic.showLeds(`
@@ -82,21 +78,19 @@ basic.forever(function () {
                 . . . . .
                 `)
             E = 1
-            T = 0
         }
     }
 })
 basic.forever(function () {
-    while (true) {
+    while (E > 0) {
         if (E == 1) {
             basic.showString("E")
-            E = 0
             E = randint(2, 4)
         }
     }
 })
 basic.forever(function () {
-    while (true) {
+    while (E > 0) {
         if (E == 2) {
             basic.showLeds(`
                 . . . . .
@@ -127,7 +121,7 @@ basic.forever(function () {
     }
 })
 basic.forever(function () {
-    while (true) {
+    while (T > 0 && E > 1) {
         if (E == 2 && T == 1) {
             basic.showLeds(`
                 . . . . .
@@ -136,6 +130,8 @@ basic.forever(function () {
                 # # # # #
                 . . . . .
                 `)
+            T = 0
+            E = 0
         } else if (E == 2 && T == 2) {
             basic.showLeds(`
                 . . . . .
@@ -144,6 +140,8 @@ basic.forever(function () {
                 . # # # .
                 # . . . #
                 `)
+            T = 0
+            E = 0
         } else if (E == 2 && T == 3) {
             basic.showLeds(`
                 . . . . .
@@ -152,6 +150,8 @@ basic.forever(function () {
                 # . . . #
                 . # # # .
                 `)
+            T = 0
+            E = 0
         } else if (E == 3 && T == 1) {
             basic.showLeds(`
                 . . . . .
@@ -160,6 +160,8 @@ basic.forever(function () {
                 # . . . #
                 . # # # .
                 `)
+            T = 0
+            E = 0
         } else if (E == 3 && T == 2) {
             basic.showLeds(`
                 . . . . .
@@ -168,6 +170,8 @@ basic.forever(function () {
                 # # # # #
                 . . . . .
                 `)
+            T = 0
+            E = 0
         } else if (E == 3 && T == 3) {
             basic.showLeds(`
                 . . . . .
@@ -176,6 +180,8 @@ basic.forever(function () {
                 . # # # .
                 # . . . #
                 `)
+            T = 0
+            E = 0
         } else if (E == 4 && T == 1) {
             basic.showLeds(`
                 . . . . .
@@ -184,6 +190,8 @@ basic.forever(function () {
                 . # # # .
                 # . . . #
                 `)
+            T = 0
+            E = 0
         } else if (E == 4 && T == 2) {
             basic.showLeds(`
                 . . . . .
@@ -192,6 +200,8 @@ basic.forever(function () {
                 # . . . #
                 . # # # .
                 `)
+            T = 0
+            E = 0
         } else if (E == 4 && T == 3) {
             basic.showLeds(`
                 . . . . .
@@ -200,6 +210,8 @@ basic.forever(function () {
                 # # # # #
                 . . . . .
                 `)
+            T = 0
+            E = 0
         }
     }
 })
