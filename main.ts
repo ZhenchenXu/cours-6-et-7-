@@ -32,7 +32,7 @@ basic.showLeds(`
     . . . . .
     `)
 basic.pause(1000)
-basic.showString("Ça commence !")
+basic.showString("Ca commence !")
 while (T == 0) {
     if (input.buttonIsPressed(Button.A)) {
         basic.showString("T")
@@ -47,40 +47,6 @@ while (T == 0) {
         T = 3
     }
 }
-basic.forever(function () {
-    while (T > 0) {
-        if (T == 1) {
-            basic.showLeds(`
-                . . . . .
-                . # # # .
-                . # # # .
-                . # # # .
-                . . . . .
-                `)
-            E = 1
-        }
-        if (T == 2) {
-            basic.showLeds(`
-                # . # . #
-                . # . # .
-                # . # . #
-                . # . # .
-                # . # . #
-                `)
-            E = 1
-        }
-        if (T == 3) {
-            basic.showLeds(`
-                . . . . .
-                # . # # #
-                . # . . .
-                # . # # #
-                . . . . .
-                `)
-            E = 1
-        }
-    }
-})
 basic.forever(function () {
     while (E > 0) {
         if (E == 1) {
@@ -117,6 +83,40 @@ basic.forever(function () {
                 # . # # #
                 . . . . .
                 `)
+        }
+    }
+})
+basic.forever(function () {
+    while (T > 0) {
+        if (T == 1) {
+            basic.showLeds(`
+                . . . . .
+                . # # # .
+                . # # # .
+                . # # # .
+                . . . . .
+                `)
+            E = 1
+        }
+        if (T == 2) {
+            basic.showLeds(`
+                # . # . #
+                . # . # .
+                # . # . #
+                . # . # .
+                # . # . #
+                `)
+            E = 1
+        }
+        if (T == 3) {
+            basic.showLeds(`
+                . . . . .
+                # . # # #
+                . # . . .
+                # . # # #
+                . . . . .
+                `)
+            E = 1
         }
     }
 })
