@@ -33,20 +33,6 @@ basic.showLeds(`
     `)
 basic.pause(1000)
 basic.showString("Ca commence !")
-while (T == 0) {
-    if (input.buttonIsPressed(Button.A)) {
-        basic.showString("T")
-        T = 1
-    }
-    if (input.buttonIsPressed(Button.B)) {
-        basic.showString("T")
-        T = 2
-    }
-    if (input.buttonIsPressed(Button.AB)) {
-        basic.showString("T")
-        T = 3
-    }
-}
 basic.forever(function () {
     if (E == 2 && T == 1) {
         basic.showLeds(`
@@ -141,40 +127,57 @@ basic.forever(function () {
     }
 })
 basic.forever(function () {
+	
+})
+basic.forever(function () {
     while (E > 0) {
         if (E == 1) {
             basic.showString("E")
             E = randint(2, 4)
         }
+        if (E == 2) {
+            basic.showLeds(`
+                . . . . .
+                . # # # .
+                . # # # .
+                . # # # .
+                . . . . .
+                `)
+        }
+        if (E == 3) {
+            basic.showLeds(`
+                # . # . #
+                . # . # .
+                # . # . #
+                . # . # .
+                # . # . #
+                `)
+        }
+        if (E == 4) {
+            basic.showLeds(`
+                . . . . .
+                # . # # #
+                . # . . .
+                # . # # #
+                . . . . .
+                `)
+        }
     }
 })
 basic.forever(function () {
-    if (E == 2) {
-        basic.showLeds(`
-            . . . . .
-            . # # # .
-            . # # # .
-            . # # # .
-            . . . . .
-            `)
-    }
-    if (E == 3) {
-        basic.showLeds(`
-            # . # . #
-            . # . # .
-            # . # . #
-            . # . # .
-            # . # . #
-            `)
-    }
-    if (E == 4) {
-        basic.showLeds(`
-            . . . . .
-            # . # # #
-            . # . . .
-            # . # # #
-            . . . . .
-            `)
+    while (T == 0) {
+        if (input.buttonIsPressed(Button.A)) {
+            basic.showString("T")
+            T = 1
+        }
+        if (input.buttonIsPressed(Button.B)) {
+            basic.showString("T")
+            T = 2
+        }
+        if (input.buttonIsPressed(Button.AB)) {
+            basic.showString("T")
+            T = 3
+        }
     }
 })
 basic.forever(function () {
